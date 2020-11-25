@@ -17,6 +17,11 @@
 // C can be placed before D (500) and M (1000) to make 400 and 900.
 // Given a roman numeral, convert it to an integer.
 
+// Constraints:
+// 1 <= s.length <= 15
+// s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
+// It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
 var romanToInt = function(s) {
   const singleMap = new Map();
   singleMap.set('I', 1);
@@ -45,9 +50,7 @@ var romanToInt = function(s) {
     } else if (singleMap.has(s[index])) {
       result += singleMap.get(s[index]);
       index += 1;
-    } else {
-      return false;
-    }
+    } 
   }
   return result;
 };
