@@ -4,6 +4,8 @@
 
 // Return true if and only if the given array A is monotonic.
 
+
+// two-pass solution
 const isMonotonic = A => {
   return increasing(A) || decreasing(A);
 };
@@ -25,3 +27,26 @@ const decreasing = A => {
 }
 
 
+// One-pass solution
+const isMonotonicOnePass = A => {
+  let increasing = true;
+  let decreasing = true;
+
+  for (let i =0; i < A.length; i++) {
+    if (A[i] > A[i+1]) {
+      increasing = false;
+    } else if (A[i] < A[i+1]) {
+      decreasing = false;
+    }
+  }
+
+  return increasing || decreasing;
+}
+
+// two pass
+// const result = isMonotonic([5, 4, 3, 2, 1])
+// console.log(result);
+
+// one pass
+const result = isMonotonicOnePass([5, 4, 5, 2, 1])
+console.log(result);
