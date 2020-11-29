@@ -1,6 +1,8 @@
 
 // Write a program to count the the total occurance of each character in a string
 
+// Input: "Prashant Shrikant"
+// Output:  p: 1, r: 2, a: 3, s: 2, h: 2, n: 2, t: 2, i: 1, k: 1 
 
 const countCharacters = (str) => {
   let obj = {};
