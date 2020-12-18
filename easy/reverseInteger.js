@@ -15,7 +15,6 @@ var reverseA = (x) => {
   let reverseNumber = 0;
   while (x != 0) {
     let pop = x % 10;
-    console.log(pop)
     x = parseInt(x / 10);
     reverseNumber = reverseNumber * 10 + pop;
   }
@@ -29,4 +28,27 @@ var reverseA = (x) => {
 };
 
 const resultF = reverseF(1534236469);
-const resultA = reverseA(1534236469);
+console.log(resultF)
+const resultA = reverseA(123);
+console.log(resultA)
+
+
+const reverse = x => {
+  let reverseNum = 0; 
+  while (x != 0) {
+    let pop = x % 10;
+    x = parseInt(x / 10);
+    reverseNum = reverseNum * 10 + pop;
+  }
+  console.log(reverseNum)
+  if (reverseNum < -2147483648) {
+    return 0;
+  }
+  if (reverseNum > 2147483648) {
+    return 0;
+  }
+  return(reverseNum);
+}
+
+const result = reverse(1534236469)
+console.log(result)
