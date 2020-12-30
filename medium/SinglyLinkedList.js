@@ -74,7 +74,11 @@ class MyLinkedList{
 }
 
 const list = new MyLinkedList();
-list.addAtIndex(0, 10);
-list.addAtIndex(0, 20);
-list.addAtIndex(1, 230);
-console.log(list.get(0))
+list.addAtTail(10);
+list.addAtTail(20);
+list.addAtTail(30);
+list.addAtTail(40);
+
+console.log(list)
+list.reverseList(list.head);
+console.log(list)
